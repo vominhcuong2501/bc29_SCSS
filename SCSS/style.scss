@@ -11,7 +11,7 @@ $color: rgba(182, 24, 130, 1);
 header {
   background-image: url(../images/yellow_top_wave_01.png);
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: top;
   background-size: cover;
   height: 190px;
   .navbar {
@@ -63,7 +63,7 @@ header {
 .carousel {
   background-image: url(../images/Violet_top_left_wave.png);
   background-repeat: no-repeat;
-  background-position: bottom left;
+  background-position: bottom center;
   background-size: 100%;
   .carousel-left {
     align-self: center;
@@ -81,34 +81,29 @@ header {
   background-color: #dcd1f3;
   background-image: url(../images/Wave_White_bottom_right_shape_01.png);
   background-repeat: no-repeat;
-  background-position: bottom right;
+  background-position: bottom center;
   background-size: 100%;
   padding-top: 100px;
   .teacher__list {
-    margin: 0 100px;
     .teacher__item {
       margin: 20px 5px;
       overflow: hidden;
       transition: all 0.5s;
+      border-radius: 20px;
       &:hover {
           box-shadow: 0 5px 5px gray;
       }
       .image {
         width: 100%;
-        overflow: hidden;
-        border-top-left-radius: 20px;
-        border-top-right-radius: 20px;
         transition: all 0.5s;
         &:hover {
-          transform: scale(1.1);
+          transform: scale(1.05);
         }
       }
       .teacher__text {
         text-align: center;
         padding: 10px;
         background-color: white;
-        border-bottom-left-radius: 20px;
-        border-bottom-right-radius: 20px;
         span {
             color: $color;
             font-size: 13px;
@@ -124,7 +119,7 @@ header {
 .form__DK {
   background-image: url(../images/accent_bottom_wave_01.png);
   background-repeat: no-repeat;
-  background-position: bottom right;
+  background-position: bottom center;
   background-size: 100%;
   padding-top: 150px;
   .form__input{
@@ -135,6 +130,22 @@ header {
       box-shadow: 0px 0px 10px rgba(0,0,0,.1);
       align-self: center;
       border-radius: 30px;
+      h2 {
+        font-size: 40px;
+        font-weight: bold;
+      }
+      .input-group {
+        select {
+          border: 1px solid rgba(0,0,0,.1);
+          border-left: none;
+          border-top-right-radius: 20px;
+          border-bottom-right-radius: 20px;
+          height: 50px;
+          &:focus {
+            box-shadow: none;
+          }
+        }
+      }
       .input-group-text {
         background-color: white;
         border: 1px solid rgba(0,0,0,.1);
@@ -159,6 +170,13 @@ header {
         &:focus {
           box-shadow: none;
         }
+      }
+      #selected {
+        border: 1px solid rgba(0,0,0,.1);
+        border-left: none;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+        height: 50px;
       }
       textarea {
         border-radius: 20px;
@@ -187,3 +205,83 @@ header {
     }
   }
 }
+
+.footer {
+  background-image: url(../images/footer_background.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 150px;
+  margin-top: -5px;
+  .footer__item {
+    color: white; 
+    font-size: 15px;
+    ul {
+      list-style: none;
+      li {
+        line-height: 35px;
+        h3 {
+          font-weight: bold;
+          font-size: 40px;
+          margin: 30px 0;
+        } 
+        span {
+          color: white;
+          i {
+            margin: 0 5px;
+          }
+        }
+        a {
+          text-decoration: none;
+          color: white;
+          transition: all 0.5s;
+          &:hover {
+            color: rgb(193, 193, 193);
+          }
+          i {
+            margin: 0 5px;
+          }
+        }
+        input {
+          border-radius: 30px;
+          border: 1px solid rgba(255,255,255,.1);
+          background-color: #aa017e;
+          padding: 30px 0px;
+          margin: 20px 0;
+          &:focus {
+            box-shadow: none;
+            border: 1px solid white;
+          }
+          &::placeholder {
+            color: white;
+            opacity: 1;
+          }
+        }
+        .btn_contact {
+          padding: 15px 85px;
+          border: 1px solid white;
+          border-radius: 30px;
+          background-color: white;
+          color: black;
+          font-weight: 600;
+          &:hover {
+            background-color: #aa017e;
+            color: white;
+          }
+        }
+      }
+    }
+  }
+  .footer__link {
+    ul {
+      li {
+        border-bottom: 1px solid rgba(0,0,0,.1);
+      }
+      .underlight {
+        border: none;
+      }
+    }
+    
+  }
+}
+
