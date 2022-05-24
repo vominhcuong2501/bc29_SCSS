@@ -1,0 +1,14 @@
+.carousel {
+    @include styleBg-img(url(./../images/Violet_top_left_wave.png), bottom center, no-repeat, 100%);
+    .carousel-left {
+      align-self: center;
+      h6 {
+        color: $color;
+        font-size: $fs-3;
+      }
+      h2 {
+        font-weight: $fw-4;
+        font-size: 60px;
+      }
+    }
+  }

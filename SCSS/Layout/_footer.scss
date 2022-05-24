@@ -1,0 +1,48 @@
+.footer {
+    @include styleBg-img(url(./../images/footer_background.jpg), center, no-repeat, cover);
+    padding: $pd-9;
+    margin-top: -5px;
+    .footer__item {
+      @include styleText($fs-1, none, $color-white-1);
+      ul {
+        list-style: none;
+        li {
+          line-height: 35px;
+          h3 {
+            @include styleText($fs-5, $fw-4, $color-white-1);
+            margin: $mg-2 0;
+          } 
+          span {
+            i {
+              margin: 0 5px;
+            }
+          }
+          a {
+            text-decoration: none;
+            color: white;
+            transition: all 0.5s;
+            &:hover {
+              color: $color-white-2;
+            }
+            i {
+              margin: 0 5px;
+            }
+          }
+          
+        }
+      }
+    }
+    .footer__link {
+      ul {
+        li {
+          border-bottom: 1px solid $color-black-2;
+        }
+        .underlight {
+          border: none;
+        }
+      }
+      
+    }
+  }
+  
+  

@@ -1,0 +1,6 @@
+.teacher {
+    background-color:#dcd1f3;
+    @include styleBg-img(url(./../images/Wave_White_bottom_right_shape_01.png), bottom center, no-repeat, 100%);
+    padding-top: $pd-8;
+    
+  }

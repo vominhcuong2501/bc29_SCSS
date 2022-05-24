@@ -1,0 +1,62 @@
+header {
+    @include styleBg-img(url(./../images/yellow_top_wave_01.png), top, no-repeat, 100%);
+    height: 200px;
+    .navbar {
+      padding: 0;
+      .navbar-nav {
+        margin-left: 200px;
+        .nav-item {
+          margin-right: $mg-1;
+          align-self: center;
+          position: relative;
+          .nav-link {
+            @include styleText($fs-2, $fw-2, $color-black-1);
+            transition: all 0.5s;
+            &:hover {
+              color: $color;
+            }
+          }
+          .menu {
+            &::after {
+                position: absolute;
+                content: "";
+                width: 0px;
+                height: 10px;
+                background-color: $color;
+                border-radius: 50%;
+                bottom: 0;
+                left: 45%;
+                transition: all 0.5s;
+              }
+            &:hover {
+                &::after {
+                    width: 10px
+                }
+            }
+          }
+        }
+        .active {
+            .menu {
+                color: $color;
+                &::after {
+                    width: 10px
+                }
+            }            
+        }
+      }
+    }
+    .icon {
+        @include styleText($fs-2, $fw-2, $color-black-1);
+        margin-left: $mg-1;
+        cursor: pointer;
+        a {
+            padding: 0 $pd-2;
+            transition: all 0.5s;
+            i {
+                &:hover {
+                    color: $color;
+                }
+            }
+        }
+      }
+  }

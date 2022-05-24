@@ -1,0 +1,30 @@
+.teacher__list {
+    .teacher__item {
+      margin: $mg-1 5px;
+      overflow: hidden;
+      transition: all 0.5s;
+      border-radius: $bd-ra-1;
+      &:hover {
+          box-shadow: 0 5px 5px gray;
+      }
+      .image {
+        width: 100%;
+        transition: all 0.5s;
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+      .teacher__text {
+        text-align: center;
+        padding: $pd-2;
+        background-color: $color-white-1;
+        span {
+            color: $color;
+            font-size: $fs-1;
+        }
+        h5 {
+            font-weight: $fw-4;
+        }
+      }
+    }
+  }
