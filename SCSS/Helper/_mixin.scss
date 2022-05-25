@@ -10,3 +10,10 @@
     font-weight: $fw;
     color: $color;
 }
+
+@mixin styleButton($pd-x, $pd-y, $bg-color, $bd-ra, $bd) {
+    padding: $pd-x $pd-y;
+    background-color: $bg-color;
+    border-radius: $bd-ra;
+    border: $bd;
+}

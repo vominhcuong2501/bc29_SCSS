@@ -35,13 +35,14 @@
             <a class="navbar-brand" href="#">
                 <img src="./images/crest.png" alt="Logo" style="width: 100%" />
             </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <i class="fas fa-bars"></i>
-            </button>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon">
+                    <i class="fas fa-bars"></i>
+                </span>
+              </button>
             </div>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav">
+                <ul class="navbar-nav align-items-center">
                     <li class="nav-item">
                         <a class="nav-link menu" href="#">Home</a>
                     </li>
@@ -59,26 +60,21 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link menu" href="#">Element</a>
-                    </li>
-                   
+                    </li> 
+                    <li>
+                        <a class=" btn-number-phone">
+                            <i class="fas fa-phone"></i>(+1) 555 234 8765
+                        </a>
+                    </li> 
+                    <li class="nav-item d-flex icon">
+                        <a >
+                            <i class="fab fa-twitter"></i>
+                            <i class="fab fa-facebook-f"></i>
+                            <i class="fab fa-youtube"></i>
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </li>  
                 </ul>
-                <a class=" btn-number-phone">
-                    <i class="fas fa-phone"></i>(+1) 555 234 8765
-                </a>
-                <div class="nav-item d-flex icon">
-                    <a >
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                    <a >
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a >
-                        <i class="fab fa-youtube"></i>
-                    </a>
-                    <a >
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                </div>
         </nav>
     </header>
 
@@ -329,11 +325,13 @@
                                 <h3>Newsletter</h3>
                             </li>
                             <li>
-                                <input type="text" class="form-control text-center" placeholder="Your Email">
-                            </li>
-                            <li>
-                                <button class="btn_contact" href="">SUBSCRIBE</button>
-                            </li>
+                                <form class="row">
+                                  <div class="form-group col-12 ">
+                                    <input type="email" class="form-control text-center" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Your Email">
+                                  </div>
+                                  <button class="btn_contact col-12 form-group">SUBSCRIBE</button>
+                                </form>
+                              </li>
                         </ul>
                     </div>
                 </div>

@@ -7,8 +7,8 @@ header {
         margin-left: 200px;
         .nav-item {
           margin-right: $mg-1;
-          align-self: center;
           position: relative;
+          line-height: 40px;
           .nav-link {
             @include styleText($fs-2, $fw-2, $color-black-1);
             transition: all 0.5s;
@@ -16,7 +16,7 @@ header {
               color: $color;
             }
           }
-          .menu {
+          .nav-link {
             &::after {
                 position: absolute;
                 content: "";
@@ -36,7 +36,7 @@ header {
           }
         }
         .active {
-            .menu {
+            .nav-link {
                 color: $color;
                 &::after {
                     width: 10px
@@ -53,6 +53,7 @@ header {
             padding: 0 $pd-2;
             transition: all 0.5s;
             i {
+              margin: 0 5px;
                 &:hover {
                     color: $color;
                 }

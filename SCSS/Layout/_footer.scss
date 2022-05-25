@@ -6,10 +6,11 @@
       @include styleText($fs-1, none, $color-white-1);
       ul {
         list-style: none;
+        
         li {
           line-height: 35px;
           h3 {
-            @include styleText($fs-5, $fw-4, $color-white-1);
+            @include styleText($fs-4, $fw-4, $color-white-1);
             margin: $mg-2 0;
           } 
           span {
@@ -28,7 +29,21 @@
               margin: 0 5px;
             }
           }
-          
+          .text-center {
+            border-radius: $bd-ra-2;
+            border: 1px solid $color-black-3;
+            background-color: $color-pink-2;
+            padding: $pd-5 0px;
+            
+            &:focus {
+              box-shadow: none;
+              border: 1px solid $color-white-1;
+            }
+            &::placeholder {
+              color: $color-white-1;
+              opacity: 1;
+            }
+          }
         }
       }
     }
