@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Title</title>
+    <title>OUR TEACH</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -25,6 +25,31 @@
 
     <!-- vào trang animate style lấy link  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <style>
+        .loader {
+            border: 16px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 16px solid #3498db;
+            width: 120px;
+            height: 120px;
+            margin: 0 auto;
+            -webkit-animation: spin 2s linear infinite; /* Safari */
+            animation: spin 2s linear infinite;
+          }
+          
+          /* Safari */
+          @-webkit-keyframes spin {
+            0% { -webkit-transform: rotate(0deg); }
+            100% { -webkit-transform: rotate(360deg); }
+          }
+          
+          @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+          }
+    </style>
+
 
     <link rel="stylesheet" href="./css/style.css" />
 </head>
@@ -94,8 +119,9 @@
 
     <section class="teacher">
         <div class="teacher__list container">
-            <div class="row">
-                <div class="col-6 col-md-4 col-lg-3 wow animate__animated  animate__fadeInLeft">
+            <div class="loader" id="loader" style="display: none"></div>
+            <div class="row" id="listTeacher">
+                <!-- <div class="col-6 col-md-4 col-lg-3 wow animate__animated  animate__fadeInLeft">
                     <div class="teacher__item">
                         <img class="image" src="./images/teacher_1.jpg" alt="" />
                         <div class="teacher__text">
@@ -104,77 +130,7 @@
                             <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
                         </div>
                     </div>
-                </div>
-                <div class="col-6 col-md-4 col-lg-3 wow animate__animated  animate__fadeInLeft">
-                    <div class="teacher__item">
-                        <img class="image" src="./images/teacher_2.jpg" alt="" />
-                        <div class="teacher__text">
-                            <span>FRENCH</span>
-                            <h5>John Stone</h5>
-                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-6 col-md-4 col-lg-3 wow animate__animated  animate__fadeInLeft">
-                    <div class="teacher__item">
-                        <img class="image" src="./images/teacher_3.jpg" alt="" />
-                        <div class="teacher__text">
-                            <span>JAPANESE</span>
-                            <h5>Emma Stone</h5>
-                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-6 col-md-4 col-lg-3 wow animate__animated  animate__fadeInLeft">
-                    <div class="teacher__item">
-                        <img class="image" src="./images/teacher_4.jpg" alt="" />
-                        <div class="teacher__text">
-                            <span>CHINESE</span>
-                            <h5>Mark Lee</h5>
-                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-6 col-md-4 col-lg-3 wow animate__animated  animate__fadeInLeft">
-                    <div class="teacher__item">
-                        <img class="image" src="./images/teacher_5.jpg" alt="" />
-                        <div class="teacher__text">
-                            <span>RUSSIAN</span>
-                            <h5>John Duo</h5>
-                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-6 col-md-4 col-lg-3 wow animate__animated  animate__fadeInLeft">
-                    <div class="teacher__item">
-                        <img class="image" src="./images/teacher_6.jpg" alt="" />
-                        <div class="teacher__text">
-                            <span>SWEDEN</span>
-                            <h5>Jane Smith</h5>
-                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-6 col-md-4 col-lg-3 wow animate__animated  animate__fadeInLeft">
-                    <div class="teacher__item">
-                        <img class="image" src="./images/teacher_7.jpg" alt="" />
-                        <div class="teacher__text">
-                            <span>SPANISH</span>
-                            <h5>Anna Alverez</h5>
-                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-6 col-md-4 col-lg-3 wow animate__animated  animate__fadeInLeft">
-                    <div class="teacher__item">
-                        <img class="image" src="./images/teacher_8.jpg" alt="" />
-                        <div class="teacher__text">
-                            <span>ITALIAN</span>
-                            <h5>July Roberts</h5>
-                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
-                        </div>
-                    </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </section>
@@ -350,10 +306,17 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-        <script src="./wowjs/wow.min.js"></script>
+    <!-- ANIMATION -->
+    <script src="./wowjs/wow.min.js"></script>
     <script>
         new WOW().init();
     </script>
+    <!-- AXIOS CND -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"
+        integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./src/services/index.js"></script>
+    <script src="./src/main.js"></script>
 </body>
 
 </html>
