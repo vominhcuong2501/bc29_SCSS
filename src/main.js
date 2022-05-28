@@ -27,8 +27,8 @@ function renderListTeacher(data) {
                     <div class="teacher__item">
                         <img class="image" src="./../images/${teacher.hinhAnh}" alt="" />
                         <div class="teacher__text">
-                            <span>${teacher.quocTich}</span>
-                            <h5>${teacher.ten}</h5>
+                            <span>${teacher.ngonNgu}</span>
+                            <h5>${teacher.hoTen}</h5>
                             <p>${teacher.moTa}</p>
                         </div>
                     </div>
