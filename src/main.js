@@ -3,13 +3,23 @@ var service = new Services();
 function getEle(id) {
     return document.getElementById(id);
 }
-
+/**
+ * Câu 3: Sử dụng Axios để lấy Danh sách người dùng từ API
+ */
 function getListTeacher() {
     getEle("loader").style.display = "block";
     service
         .getListTeacherApi()
         .then(function(result){
-            renderListTeacher(result.data);
+            var arrTeacher = result.data.map(function (teacher) {
+                if (teacher.loaiND == "GV") {
+                    return teacher;
+                }
+            })
+            var arrTeacherGV = arrTeacher.filter(function (teacherGV) {
+                return teacherGV !== undefined;
+            })
+            renderListTeacher(arrTeacherGV);
             getEle("loader").style.display = "none";
         })
         .catch(function(error){
@@ -19,6 +29,9 @@ function getListTeacher() {
 
 getListTeacher();
 
+/**
+ * Câu 2: Chuyển phần danh sách Teacher của trang "Our Teach" (Bài tập phần SASS) sang dữ liệu động
+ */
 function renderListTeacher(data) {
     var contentHTML = "";
     data.forEach(function(teacher){

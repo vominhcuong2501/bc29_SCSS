@@ -1,3 +1,6 @@
+/**
+ * Câu 1: Tạo API "quản lý người dùng" trên MockAPI
+ */
 function Services() {
     this.getListTeacherApi = function() {
         return axios ({
@@ -11,4 +14,7 @@ function Services() {
             method: "GET",
         });
     };
+    this.getTeacherApi = function() {
+        
+    }
 }
