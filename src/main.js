@@ -11,6 +11,9 @@ function getListTeacher() {
     service
         .getListTeacherApi()
         .then(function(result){
+            /**
+             * Câu 4: Có 2 loại người dùng là GV và HV. Chỉ hiện loại người dùng GV lên trang "Our Teach“
+             */
             var arrTeacher = result.data.map(function (teacher) {
                 if (teacher.loaiND == "GV") {
                     return teacher;
